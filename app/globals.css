@@ -1,26 +1,31 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --cor-fundo:       #0B1120;
+  --cor-superficie:  #111827;
+  --cor-cartao:      #1F2937;
+  --cor-borda:       #374151;
+  --cor-texto:       #F9FAFB;
+  --cor-texto-sub:   #9CA3AF;
+  --cor-destaque:    #3B82F6;
+  --cor-destaque-2:  #60A5FA;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  font-family: 'Inter', system-ui, sans-serif;
+  min-height: 100vh;
 }
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--cor-superficie); }
+::-webkit-scrollbar-thumb { background: var(--cor-borda); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--cor-texto-sub); }
+
+.animate-delay-100 { animation-delay: 100ms; }
+.animate-delay-200 { animation-delay: 200ms; }
+.animate-delay-300 { animation-delay: 300ms; }
+.animate-delay-400 { animation-delay: 400ms; }
